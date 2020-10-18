@@ -50,53 +50,120 @@ Table of contents
     39. Coming soon
     40. Elements
 
+
+
+
 */
 
 /* ===================================
     Google font
 ====================================== */
-.bobody{
-    border-top: 5px solid red;
-
-}
-
-.bobody2 {
-
-  border: solid !important; 
-
-  border-width: 10px !important;
-    
-  border-top-color: #b61b1b;
-  animation: bg-color 10s infinite;
-  -webkit-animation: bg-color 10s infinite;
-}
-
-@-webkit-keyframes bg-color {
-  0% { border-top-color: #cc5d25; }
-  33% { border-top-color: #b61b1b; }
-  66% { border-top-color: #ff7f11; }
-  
-  100% { border-top-color: #cc5d25; }
-}
-
-@keyframes bg-color {
-   0% { border-top-color: #cc5d25; }
-  33% { border-top-color: #b61b1b; }
-  66% { border-top-color: #ff7f11; }
-  
-  100% { border-top-color: #cc5d25; }
-}
-
-
 
 @import url(http://fonts.googleapis.com/css?family=Roboto:400,100,300,500,700,900);
 @import url(http://fonts.googleapis.com/css?family=Montserrat:400,700);
 
 /* ===================================
-    Reset
+    
+
+background: rgb(102,63,251);
+background: linear-gradient(139deg, rgba(102,63,251,1) 0%, rgba(51,2,152,1) 81%);
+
+
 ====================================== */
 
-body{ font-family: 'Roboto', sans-serif; -webkit-font-smoothing: antialiased;  font-smoothing: antialiased; font-size:13px; color:#626262; line-height:23px; letter-spacing: 0.02em }
+
+
+
+.gradient-amarillo{
+  background: rgb(222,111,29);
+background: linear-gradient(90deg, rgba(222,111,29,1) 36%, rgba(255,161,24,1) 100%);
+}
+
+.gradient-morado{
+  background: rgb(102,63,251);
+background: linear-gradient(139deg, rgba(102,63,251,1) 0%, rgba(51,2,152,1) 81%);
+}
+
+.gradient-rojo{
+  background: rgb(166,16,73);
+background: linear-gradient(149deg, rgba(166,16,73,1) 0%, rgba(227,95,50,1) 45%, rgba(255,0,89,1) 100%);
+}
+
+
+
+#noise {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    width: 100vw;
+    overflow: hidden;
+    pointer-events: none;
+    z-index: 9999 !important;
+}
+
+#noise:before {
+    content: '';
+    position: absolute;
+    top: -100%;
+    left: -100%;
+    height: 300%;
+    width: 300%;
+    background: url(http://fariskassim.com/stage/codepenstuff/noise.png);
+    pointer-events: none;
+    display: block;
+    opacity: .5;
+    -webkit-animation: grain 2s steps(10) infinite;
+    animation: grain 2s steps(10) infinite;
+    will-change: transform;
+}
+
+
+@-webkit-keyframes grain{0%,to{-webkit-transform:translate(0);transform:translate(0)}10%{-webkit-transform:translate(-5%,-10%);transform:translate(-5%,-10%)}20%{-webkit-transform:translate(-15%,5%);transform:translate(-15%,5%)}30%{-webkit-transform:translate(7%,-25%);transform:translate(7%,-25%)}40%{-webkit-transform:translate(21%,25%);transform:translate(21%,25%)}50%{-webkit-transform:translate(-25%,10%);transform:translate(-25%,10%)}60%{-webkit-transform:translate(15%,5%);transform:translate(15%,5%)}70%{-webkit-transform:translateY(15%);transform:translateY(15%)}80%{-webkit-transform:translate(25%,35%);transform:translate(25%,35%)}90%{-webkit-transform:translate(-10%,10%);transform:translate(-10%,10%)}}@keyframes grain{0%,to{-webkit-transform:translate(0);transform:translate(0)}10%{-webkit-transform:translate(-5%,-10%);transform:translate(-5%,-10%)}20%{-webkit-transform:translate(-15%,5%);transform:translate(-15%,5%)}30%{-webkit-transform:translate(7%,-25%);transform:translate(7%,-25%)}40%{-webkit-transform:translate(21%,25%);transform:translate(21%,25%)}50%{-webkit-transform:translate(-25%,10%);transform:translate(-25%,10%)}60%{-webkit-transform:translate(15%,5%);transform:translate(15%,5%)}70%{-webkit-transform:translateY(15%);transform:translateY(15%)}80%{-webkit-transform:translate(25%,35%);transform:translate(25%,35%)}90%{-webkit-transform:translate(-10%,10%);transform:translate(-10%,10%)}}
+@-webkit-keyframes grain2{0%,to{-webkit-transform:translate(0);transform:translate(0)}10%{-webkit-transform:translate(-1%,-2%);transform:translate(-1%,-2%)}20%{-webkit-transform:translate(-2%,1%);transform:translate(-2%,1%)}30%{-webkit-transform:translate(3%,-5%);transform:translate(3%,-5%)}40%{-webkit-transform:translate(5%,5%);transform:translate(5%,5%)}50%{-webkit-transform:translate(-5%,2%);transform:translate(-5%,2%)}60%{-webkit-transform:translate(3%,1%);transform:translate(3%,1%)}70%{-webkit-transform:translateY(3%);transform:translateY(3%)}80%{-webkit-transform:translate(5%,7%);transform:translate(5%,7%)}90%{-webkit-transform:translate(-2%,2%);transform:translate(-2%,2%)}}@keyframes grain2{0%,to{-webkit-transform:translate(0);transform:translate(0)}10%{-webkit-transform:translate(-1%,-2%);transform:translate(-1%,-2%)}20%{-webkit-transform:translate(-3%,1%);transform:translate(-3%,1%)}30%{-webkit-transform:translate(3%,-5%);transform:translate(3%,-5%)}40%{-webkit-transform:translate(5%,5%);transform:translate(5%,5%)}50%{-webkit-transform:translate(-5%,2%);transform:translate(-5%,2%)}60%{-webkit-transform:translate(3%,1%);transform:translate(3%,1%)}70%{-webkit-transform:translateY(5%);transform:translateY(5%)}80%{-webkit-transform:translate(5%,7%);transform:translate(5%,7%)}90%{-webkit-transform:translate(-2%,2%);transform:translate(-2%,2%)}}
+
+
+
+
+
+
+body {
+    background-color: #0e1111 !important;
+    margin: 0;
+    overflow-x: hidden;
+  }
+
+ 
+
+  .simbolo-top {
+    
+    
+    
+    -webkit-animation:spin 1s linear infinite;
+    -moz-animation:spin 1s linear infinite;
+    animation:spin 1s linear infinite;
+     transform-origin: center center;
+}
+@-moz-keyframes spin { 100% { -moz-transform: rotate(360deg); } }
+@-webkit-keyframes spin { 100% { -webkit-transform: rotate(360deg); } }
+@keyframes spin { 100% { -webkit-transform: rotate(360deg); transform:rotate(360deg); } }
+
+
+
+.albums{
+  background-image:url('images/mesoamerica.jpg') !important;
+  
+    background-repeat: no-repeat !important;
+    background-position: center !important;
+    background-size: cover !important;
+    width: 100% !important;
+    height: 100% !important;
+}
+
+
+
+
+body{ font-family: 'Roboto', sans-serif; -webkit-font-smoothing: antialiased;  font-smoothing: antialiased; font-size:13px; line-height:23px; letter-spacing: 0.02em }
 a, a:active{ color: #626262; text-decoration: none; }
 a:hover, a:focus{ color: #272727;  text-decoration: none}
 a:focus {outline: none !important; }
@@ -157,6 +224,10 @@ h1.page-title { margin:95px auto 0; width: 100%; }
 .text-extra-large { font-size: 18px !important; line-height: 27px !important;  }
 .title-small{ font-size:20px !important; line-height:30px !important;}
 .title-medium{ font-size:24px !important; line-height:28px !important;}
+
+.title-medium2{ font-size:21px !important; line-height:23px !important;}
+
+
 .title-large{ font-size:28px !important; line-height:34px !important;}
 .title-extra-large{ font-size:35px !important; line-height:37px !important;}
 .title-extra-large-2{ font-size:45px !important; line-height:45px !important;}
@@ -172,6 +243,18 @@ h1.page-title { margin:95px auto 0; width: 100%; }
 .magenta-text{ color:#d94378 !important}
 .orange-text{ color:#ff513b !important}
 .deep-orange-text{ color:#d66e4a !important}
+.deep-orange-text2{ color:#663ffb !important}
+
+
+.deep-orange-text3{ color:rgb(222,111,29) !important}
+
+
+.deep-orange-text4{ color:rgb(166,16,73) !important}
+
+
+
+
+
 .deep-red-text{ color:#e75e50 !important}
 .black-text{ color:#000 !important}
 .yellow-text{ color:#fdd947 !important}
@@ -192,7 +275,14 @@ h1.page-title { margin:95px auto 0; width: 100%; }
 .transparent-blue-text{ color: rgba(0,239,255,.5) !important}
 .transparent-green-text{ color: rgba(0,255,151,.5) !important}
 .fast-green-text{ color: #85eea5 !important}
-.crimson-red-text { color: #e31d3b !important}
+.crimson-red-text { color: #663ffb !important}
+
+.crimson-red-text2 { color: rgb(222,111,29) !important}
+
+
+.crimson-red-text3 { color: rgb(166,16,73) !important}
+
+
 .deep-green-text { color: #1acd7b !important; }
 .deep-green-dark2-text{color: #6ad5a7 !important;}
 .deep-blue-text { color: #2283d4 !important; }
@@ -351,7 +441,7 @@ i { color: #9a9a9a; margin:0}
 .bg-light-yellow {background:#f8f7f5 !important}
 .bg-dark-green{ background:#60a532 !important;}
 .bg-dark-blue { background:#1e2126 !important;}
-.bg-deep-blue2 {background:#131d43 !important; }
+.bg-deep-blue2 {background:#000 !important; }
 .bg-deep-blue3 {background:#1d2127 !important; }
 .bg-deep-blue-dark{background:#1d6cae !important;}
 .bg-violet { background:#6c407e !important}
@@ -363,7 +453,23 @@ i { color: #9a9a9a; margin:0}
 .bg-fast-green{ background: #00ff97 !important}
 .bg-fast-blue { background: #00efff !important}
 .bg-fast-blue-green-gradiant { background: #00efff; background: -moz-linear-gradient(-45deg, #00efff 0%, #00ff97 100%); background: -webkit-gradient(linear, left top, right bottom, color-stop(0%,#00efff), color-stop(100%,#00ff97)); background: -webkit-linear-gradient(-45deg, #00efff 0%,#00ff97 100%); background: -o-linear-gradient(-45deg, #00efff 0%,#00ff97 100%); background: -ms-linear-gradient(-45deg, #00efff 0%,#00ff97 100%); background: linear-gradient(135deg, #00efff 0%,#00ff97 100%); filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00efff', endColorstr='#00ff97',GradientType=1 ); }
-.bg-crimson-red { background: #e31d3b !important}
+.bg-crimson-red { background: linear-gradient(139deg, rgba(102,63,251,1) 0%, rgba(51,2,152,1) ) !important}
+
+.bg-crimson-red2 { 
+                    background: rgb(222,111,29);
+background: linear-gradient(90deg, rgba(222,111,29,1) 36%, rgba(255,161,24,1) 100%);
+}
+
+
+
+.bg-crimson-red3 { 
+                    background: rgb(166,16,73);
+background: linear-gradient(149deg, rgba(166,16,73,1) 0%, rgba(227,95,50,1) 45%, rgba(255,0,89,1) 100%);
+}
+
+
+
+
 .bg-deep-green {background: #1acd7b !important; }
 .bg-deep-green2{background: #7ebaa1 !important;}
 .bg-deep-green-dark{background: #04b966 !important;}
@@ -646,6 +752,31 @@ section { padding: 130px 0; }
 
 .highlight-button-dark { border:2px solid #000; display: inline-block; padding: 8px 20px 9px; font-size: 12px; color:#fff; background-color: #000;  }
 .highlight-button-dark:hover, .highlight-button-dark:focus { background-color: transparent; border: 2px solid #000; color:#000}
+
+.highlight-button-dark2 { border:2px solid #000; display: inline-block; padding: 8px 20px 9px; font-size: 12px; color:#fff; background: rgb(102,63,251);
+background: linear-gradient(139deg, rgba(102,63,251,1) 0%, rgba(51,2,152,1) 81%);  }
+.highlight-button-dark2:hover, .highlight-button-dark2:focus { background-color: transparent; border: 2px solid #000; color:#fff}
+
+
+
+
+
+
+.highlight-button-dark3 { border:2px solid #000; display: inline-block; padding: 8px 20px 9px; font-size: 12px; color:#fff;  background: rgb(222,111,29);
+background: linear-gradient(90deg, rgba(222,111,29,1) 36%, rgba(255,161,24,1) 100%); }
+.highlight-button-dark3:hover, .highlight-button-dark2:focus { background-color: transparent; border: 2px solid #000; color:#fff}
+
+
+
+.highlight-button-dark4 { border:2px solid #000; display: inline-block; padding: 8px 20px 9px; font-size: 12px; color:#fff;  background: rgb(166,16,73);
+background: linear-gradient(149deg, rgba(166,16,73,1) 0%, rgba(227,95,50,1) 45%, rgba(255,0,89,1) 100%); }
+.highlight-button-dark4:hover, .highlight-button-dark2:focus { background-color: transparent; border: 2px solid #000; color:#fff}
+
+
+
+
+
+
 .highlight-button-dark i { color: #fff}
 .highlight-button-dark:hover i {color:#000}
 
@@ -798,7 +929,7 @@ section { padding: 130px 0; }
 #header {z-index: 5}
 .navbar {border: none; display: inline-table; width: 100%; border-radius:0; position: fixed; top: 0; z-index: 10; border-bottom: 1px solid rgba(255,255,255,.15) }
 nav .container { display: table-cell; height: 75px; position: relative; vertical-align: middle; }
-.navbar-header {background: url("../images/logo-border.png") right no-repeat}
+
 nav.shrink .container {height: 60px;}
 .header-right { margin: 13px 0 0; }
 .navbar-nav a { font-size: 12px; text-transform: uppercase; color: #fff !important; padding:0 !important; font-weight: 500}
@@ -849,7 +980,7 @@ nav.sidebar-nav .container { vertical-align: top; padding:60px 40px }
 .center-logo-header .navbar-nav li {display: inline-block; float: none}
 .center-logo-header .navbar-brand {float:none; padding: 0; margin-left: 0 !important;}
 .center-logo-header .navbar-nav a { font-size: 14px; color: #2e443f !important; display: inline;}
-.center-logo-header .navbar-brand img {top: 0; max-width: 6px}
+.center-logo-header .navbar-brand img {top: 0; max-width: 266px}
 .center-logo-header .nav li {margin: 0 15px; vertical-align: middle;}
 .center-logo-header .container { height: 86px !important;}
 .center-logo-header .navbar-header .logo {display: none;}

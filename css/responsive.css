@@ -721,14 +721,21 @@
     
     .widget.affix{width: 23%;}
     .tab-style5 li a{margin: 0 25px;}
-    .tab-style9 .nav-tabs li a{padding: 0 22px;}
+    .tab-style9 .nav-tabs li a {padding: 0 22px;}
     .icon-box i{ margin: 7px;}
 
     .button-bg-area .btn{margin-bottom:5px; padding: 10px;}
     
 }
 
+@media (min-width: 767px) {
+    .logo-grande {width: 75% !important;}
+    .icono-izquierdo {margin-top: -4px !important;}
+}
+
 @media (max-width: 767px) {
+
+    .icono-izquierdo {margin-top: -8px !important;}
 
     .xs-center-col{ float:none !important; margin-left:auto !important; margin-right:auto !important}
     

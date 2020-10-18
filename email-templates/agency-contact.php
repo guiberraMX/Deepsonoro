@@ -8,7 +8,7 @@
 	$comment=$_POST["comment"];
 	
 	// Email Receiver Address
-	$receiver="info@yourdomain.com";
+	$receiver="eltotemart@gmail.com";
 	$subject="Contact form details";
 
 	$message = "
@@ -19,7 +19,7 @@
 	<body>
 	<table width='50%' border='0' align='center' cellpadding='0' cellspacing='0'>
 	<tr>
-	<td colspan='2' align='center' valign='top'><img style=' margin-top: 15px; ' src='http://www.yourdomain.com/images/logo-mail.png' ></td>
+	<td colspan='2' align='center' valign='top'><img style=' margin-top: 15px; ' src='index.html/images/logo-mail.png' ></td>
 	</tr>
 	<tr>
 	<td width='50%' align='right'>&nbsp;</td>
