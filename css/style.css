@@ -279,6 +279,8 @@ h1.page-title { margin:95px auto 0; width: 100%; }
 .fast-green-text{ color: #85eea5 !important}
 .crimson-red-text { color: #663ffb !important}
 
+.crimson-red-text9{color:rgba(51,2,152,1);}
+
 .crimson-red-text2 { color: rgb(222,111,29) !important}
 
 
@@ -1556,7 +1558,7 @@ input.no-border, input.no-border:focus, select.no-border, select.no-border:focus
 ====================================== */
 
 /* quote - style 1 */
-.quote-style1:before { content: "“"; display: block; position: absolute; font-size: 200px; left: 0; top: 64px; color: #ef106e}
+.quote-style1:before { content: "“"; display: block; position: absolute; font-size: 200px; left: 0; top: 64px; color: rgb(51,2,152,1)}
 .quote-style1 {padding-left: 70px; display: block}
 
 /* quote - style 2 */
