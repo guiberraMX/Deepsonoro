@@ -1202,3 +1202,17 @@ $(function () {
                 $('b', this).toggleClass("caret caret-up");
             });
 });
+
+
+
+
+
+$(document).ready(function () {
+	// body...
+	var n = 6;
+	while(n > 0){
+		$(".animation-container").append($(".animation-container").children().first().clone());
+		n -= 1;
+	}
+});
+
